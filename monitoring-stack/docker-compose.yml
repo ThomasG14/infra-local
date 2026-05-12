@@ -66,6 +66,19 @@ services:
     networks:
       - infra-net
 
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    restart: unless-stopped
+    networks:
+      - infra-net
+    ports:
+      - "9100:9100"
+    command:
+      - '--path.rootfs=/host'
+    volumes:
+      - '/:/host:ro'
+
 volumes:
   prometheus_data:
   grafana_data:

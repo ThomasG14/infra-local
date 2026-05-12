@@ -92,17 +92,24 @@ Inclut :
 - Promtail (collecte logs Docker)
 - cAdvisor (metrics containers)
 ___
-### 🔐 Grafana login
-- URL : http://grafana.local
+## 🔐 Authentiifications
+
+### Grafana login
+- URL : http://localhost:3000/
 - User : admin
 - Password : admin
 ___
-### 🧠 Architecture logique
+### S3 login
+- URL : http://localhost:9001/
+- User : admin
+- Password : password123
+
+## 🧠 Architecture logique
 - core-stack → infra (Portainer, proxy)
 - db-stack → données (DB + S3)
 - monitoring-stack → observabilité
 ____
-### 🧰 Commandes utiles
+## 🧰 Commandes utiles
 Voir containers
 ```bash
 docker ps
