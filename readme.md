@@ -94,6 +94,11 @@ lancer le script de start
 ./start-infra.sh
 ```
 
+il est possible de stopper toute l'infra grâce à ce script:
+```bash
+./stop-infra.sh
+```
+
 
 # 🌍 Accès aux services
 
