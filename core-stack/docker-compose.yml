@@ -28,10 +28,10 @@ services:
       - portainer_data:/data
     networks:
       - infra-net
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.portainer.rule=Host(`portainer.local`)"
-      - "traefik.http.services.portainer.loadbalancer.server.port=9000"
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.portainer.rule=Host(`portainer.local`)"
+    #   - "traefik.http.services.portainer.loadbalancer.server.port=9000"
 
 volumes:
   portainer_data:
