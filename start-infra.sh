@@ -97,6 +97,7 @@ echo ""
 log "Starting MONITORING stack..."
 
 docker compose \
+  --env-file .env \
   -f monitoring-stack/docker-compose.yml \
   up -d
 
@@ -134,7 +135,8 @@ echo "📦 MinIO        → http://localhost:9001"
 echo "📊 cAdvisor     → http://localhost:8081"
 echo "🗄️ MySQL        → localhost:3306"
 echo "🐘 PostgreSQL   → localhost:5432"
-echo "⚡ Redis         → localhost:6379"
+echo "⚡ Redis        → localhost:6379"
+echo "🌿 mongoDB      → localhost:27017"
 
 echo ""
 success "Everything is operational 🚀"
