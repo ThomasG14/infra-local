@@ -44,6 +44,20 @@ services:
     networks:
       - infra-net
 
+  mongodb:
+  image: mongo:8
+  container_name: mongodb
+  restart: unless-stopped
+  ports:
+    - "27017:27017"
+  environment:
+    MONGO_INITDB_ROOT_USERNAME: admin
+    MONGO_INITDB_ROOT_PASSWORD: password123
+  volumes:
+    - mongodb_data:/data/db
+  networks:
+    - infra-net
+
   minio:
     image: minio/minio
     container_name: minio
@@ -68,6 +82,7 @@ volumes:
   mysql_data:
   postgres_data:
   redis_data:
+  mongodb_data:
   minio_data:
 
 networks:

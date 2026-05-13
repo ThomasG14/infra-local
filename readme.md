@@ -73,6 +73,7 @@ ___
 - MySQL : localhost:3306
 - PostgreSQL : localhost:5432
 - Redis : localhost:6379
+- MongoDB: localhost:27017
 ___
 ### 📦 S3 (MinIO)
 - API : http://localhost:9000
